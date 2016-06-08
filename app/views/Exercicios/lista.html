@@ -1,0 +1,14 @@
+#{extends 'main.html' /}
+#{set title:'Lista de Exercicios' /}
+
+#{if flash.success}
+	${flash.success.raw()}
+#{/if}
+
+#{list items:exercicios, as:'e'}
+	<ul>
+		<li>${e.nomeExercicio} - ${e.imagem} <a href="@{Exercicios.form(e.id)}">Editar</a> <a href="@{Exercicios.deletar(e.id)}">Excluir</a></li>
+	</ul>
+#{/list}
+
+<a href="@{Exercicios.form}">Novo</a>

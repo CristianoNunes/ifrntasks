@@ -1,0 +1,17 @@
+#{extends 'main.html' /}
+#{set title:'Exercicios' /}
+
+<form action="@{Exercicios.salvar}" method="post">
+
+	<input type="hidden" name="exercicio.id" value="${exercicio?.id}"> 
+	
+	<label>Nome</label>
+	<input type="text" name="exercicio.nomeExercicio" value="${exercicio?.nomeExercicio}">
+	<br />
+	
+	<label>Imagem</label>
+	<input type="text" name="exercicio.imagem" value="${Exercicio?.imagem}">
+
+	<input type="submit">
+
+</form>
