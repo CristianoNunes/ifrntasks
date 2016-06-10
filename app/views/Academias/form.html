@@ -39,6 +39,7 @@
               <div class="panel-body text-center">
                   <h1 class="atomic-symbol">PG</h1>
                   <p class="element-name">Personal GYM</p>
+                  <p class="element-name">Cadastro de Academia</p>
 
                   <i class="icons icon-arrow-down"></i>
                   <div class="form-group form-animate-text" style="margin-top:40px !important;">
@@ -60,17 +61,17 @@
                   </div>
                   
                   <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                    <input type="password" class="form-text" required>
+                    <input type="password" class="form-text" name="academia.senhaAcademia" value="${academia?.senhaAcademia}" required>
                     <span class="bar"></span>
                     <label>Senha</label>
                   </div>
                   <label class="pull-left">
                   <input type="checkbox" class="icheck pull-left" name="checkbox1"/> Aceito os termos e politicas.
                   </label>
-                  <input type="submit" class="btn col-md-12" value="SignUp"/>
+                  <input type="submit" class="btn col-md-12" value="Cadastrar"/>
               </div>
                 <div class="text-center" style="padding:5px;">
-                    <a href="login.html">Já tem uma conta?</a>
+                    <a href="@{Application.index}">Já tem uma conta?</a>
                 </div>
           </div>
         </form>

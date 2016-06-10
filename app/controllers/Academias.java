@@ -1,7 +1,7 @@
 package controllers;
 
 import java.util.List;
-
+import controllers.Application;
 import models.Academia;
 import play.mvc.Controller;
 
@@ -24,7 +24,7 @@ public class Academias extends Controller  {
 	public static void salvar(Academia academia) {
 		academia.save();
 		flash.success("A academia foi cadastrada com sucesso!");
-		lista();
+		Application.index();
 	}
 	
 	public static void deletar(Long id){

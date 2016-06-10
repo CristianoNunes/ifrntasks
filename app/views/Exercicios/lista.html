@@ -2,13 +2,68 @@
 #{set title:'Lista de Exercicios' /}
 
 #{if flash.success}
-	${flash.success.raw()}
+<div class="col-md-6">
+	<div class="alert alert-success col-md-12 col-sm-12  alert-icon alert-dismissible fade in" role="alert">
+		<div class="col-md-2 col-sm-2 icon-wrapper text-center">
+			<span class="fa fa-check fa-2x"></span>
+		</div>
+		<div class="col-md-10 col-sm-10">
+			<button type="button" class="close" data-dismiss="alert"
+				aria-label="Close">
+				<span aria-hidden="true">×</span>
+			</button>
+			<p>
+				<strong>Sucesso!</strong> ${flash.success.raw()}  
+			</p>
+		</div>
+	</div>
+</div>
 #{/if}
 
-#{list items:exercicios, as:'e'}
-	<ul>
-		<li>${e.nomeExercicio} - ${e.imagem} <a href="@{Exercicios.form(e.id)}">Editar</a> <a href="@{Exercicios.deletar(e.id)}">Excluir</a></li>
-	</ul>
-#{/list}
 
-<a href="@{Exercicios.form}">Novo</a>
+<div class="panel box-shadow-none content-header">
+                  <div class="panel-body">
+                    <div class="col-md-12">
+                        <h3 class="animated fadeInLeft">Lista</h3>
+                        <p class="animated fadeInDown">
+                          Lista <span class="fa-angle-right fa"></span> Exercícios
+                        </p>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-md-12 top-20 padding-0">
+                <div class="col-md-12">
+                  <div class="panel">
+                    <div class="panel-heading"><h3>Exercícios<h3></div>
+                    <div class="panel-body">
+                      <div class="responsive-table">
+                      <table id="datatables-example" class="table table-striped table-bordered" width="100%" cellspacing="0">
+                      <thead>
+                        <tr>
+                          <th>Nome</th>
+                          <th>Imagem</th>
+                          <th></th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                      #{list items:exercicios, as:'e'}
+						<tr>
+							<td> ${e.nomeExercicio}  </td> 
+							<td> ${e.imagem} </td> 
+							<td>
+								<a href="@{Exercicios.form(e.id)}"><input type="button" class="btn btn-round btn-warning" value="Editar"/></a>
+								<a href="@{Exercicios.deletar(e.id)}"> <input type="button" class="btn btn-round btn-danger" value="Excluir"/></a>
+							</td>
+						</tr>
+					  #{/list}
+                        
+                      </tbody>
+                        </table>
+                      </div>
+                      <a href="@{Exercicios.form}"><input type="button" class="btn btn-round btn-primary" value="Novo"/></a>
+                  </div>
+                </div>
+              </div>  
+              </div>
+

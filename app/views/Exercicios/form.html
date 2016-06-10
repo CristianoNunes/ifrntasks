@@ -1,17 +1,66 @@
 #{extends 'main.html' /}
 #{set title:'Exercicios' /}
 
-<form action="@{Exercicios.salvar}" method="post">
+<div class="panel box-shadow-none content-header">
+	<div class="panel-body">
+		<div class="col-md-12">
+			<h3 class="animated fadeInLeft">Cadastro</h3>
+			<p class="animated fadeInDown">
+				Cadastro <span class="fa-angle-right fa"></span> Exercício
+			</p>
+		</div>
+	</div>
+</div>
 
-	<input type="hidden" name="exercicio.id" value="${exercicio?.id}"> 
-	
-	<label>Nome</label>
-	<input type="text" name="exercicio.nomeExercicio" value="${exercicio?.nomeExercicio}">
-	<br />
-	
-	<label>Imagem</label>
-	<input type="text" name="exercicio.imagem" value="${Exercicio?.imagem}">
+<div class="col-md-10">
+	<div class="col-md-12 panel">
+		<div class="col-md-12 panel-heading">
+			<h4>Aluno</h4>
+		</div>
+		<div class="col-md-12 panel-body" style="padding-bottom: 30px;">
+			<div class="col-md-12">
+				<form class="cmxform" id="signupForm" method="post"
+					action="@{Exercicios.salvar}">
 
-	<input type="submit">
+					<input type="hidden" name="exercicio.id" value="${exercicio?.id}">
 
-</form>
+					<div class="col-md-6">
+
+						<div class="form-group form-animate-text" style="margin-top: 40px !important;">
+							<input type="text" class="form-text" name="exercicio.nomeExercicio" value="${exercicio?.nomeExercicio}" required>
+							<span class="bar"></span>
+							<label>Nome</label>
+						</div>
+						
+						<div class="form-group form-animate-text" style="margin-top:40px !important;">
+                        	<input type="text" class="form-text" name="exercicio.imagem" value="${Exercicio?.imagem}" required>
+                            <span class="bar"></span>
+                            <label>Imagem</label>
+                        </div>
+						
+
+						<!--<label>Imagem</label>
+						<div class="input-group fileupload-v1">
+							<input type="file" name="manualfile" class="fileupload-v1-file hidden" name="exercicio.imagem" value="${Exercicio?.imagem}"/>
+							<input type="text" class="form-control fileupload-v1-path" placeholder="Caminho da imagem..." required disabled> 
+							<span class="input-group-btn">
+							<button class="btn fileupload-v1-btn" type="button">
+								<i class="fa fa-folder"></i> Escolher Imagem
+							</button>
+							</span>
+						</div> -->
+
+						   
+						
+					</div>
+					
+					<div class="col-md-12" >
+					<br />
+						<input class="btn btn-round btn-success" type="submit" value="Salvar">
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>
