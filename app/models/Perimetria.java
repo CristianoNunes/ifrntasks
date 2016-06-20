@@ -8,6 +8,7 @@ public class Perimetria extends Model {
 	
 	public Float peso;
 	public Float altura;
+	public Float pescoco;
 	public Float ombro;
 	public Float torax;
 	public Float cintura;

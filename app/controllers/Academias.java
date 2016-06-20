@@ -35,7 +35,11 @@ public class Academias extends Controller  {
  
     public static void show(Long id) {
         Academia academia = Academia.findById(id);
-        render(academia);
+        if (request.contentType.equals("application/json")) {
+        	renderJSON(academia);
+        } else {
+        	render(academia);
+        }
     }
  
     public static void delete(Long id) {

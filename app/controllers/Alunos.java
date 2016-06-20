@@ -35,7 +35,11 @@ public class Alunos extends Controller {
  
     public static void show(Long id) {
         Aluno aluno = Aluno.findById(id);
-        render(aluno);
+        if (request.contentType.equals("application/json")) {
+        	renderJSON(aluno);
+        } else {
+        	render(aluno);
+        }
     }
  
     public static void delete(Long id) {

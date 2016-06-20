@@ -1,6 +1,6 @@
 (function ($) {
 
-    $.fn.ripple = function () {
+    /*$.fn.ripple = function () {
         $(this).click(function (e) {
             e.preventDefault();
             var $rippler = $(this);
@@ -32,7 +32,7 @@
               left:x+'px'
             }).addClass("animate");
         });
-    };
+    };*/
 
     $.fn.carouselAnimate = function()
     {

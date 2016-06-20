@@ -56,9 +56,7 @@
 							<td> ${a.sexo}  </td> 
 							<td> ${a.email} </td>
 							<td>
-								<a href="@{Alunos.form(a.id)}"><input type="button" class="btn btn-round btn-warning" value="Editar"/></a>
-								<a href="@{Alunos.deletar(a.id)}"> <input type="button" class="btn btn-round btn-danger" value="Excluir"/></a>
-								<a href="#"> <input type="button" class="btn btn-round btn-success" value="Treino"/></a>
+								<a href="@{Alunos.show(a.id)}"><input type="button" class="btn btn-round btn-primary" value="Detalhes"/></a>
 							</td>
 						</tr>
 					  #{/list}
