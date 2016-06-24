@@ -24,7 +24,7 @@
 <div class="panel box-shadow-none content-header">
                   <div class="panel-body">
                     <div class="col-md-12">
-                        <h3 class="animated fadeInLeft">Lista</h3>
+                        <h3 class="animated fadeInLeft">Cadastro</h3>
                         <p class="animated fadeInDown">
                           Lista <span class="fa-angle-right fa"></span> Alunos
                         </p>
@@ -41,8 +41,6 @@
                       <thead>
                         <tr>
                           <th>Nome</th>
-                          <th>Idade</th>
-                          <th>Sexo</th>
                           <th>Email</th>
                           <th></th>
                           
@@ -52,8 +50,6 @@
                       #{list items:alunos, as:'a'}
 						<tr>
 							<td> ${a.nome}  </td> 
-							<td> ${a.idade} </td> 
-							<td> ${a.sexo}  </td> 
 							<td> ${a.email} </td>
 							<td>
 								<a href="@{Alunos.show(a.id)}"><input type="button" class="btn btn-round btn-primary" value="Detalhes"/></a>

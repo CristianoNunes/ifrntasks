@@ -33,13 +33,14 @@ public class Alunos extends Controller {
 		lista();
 	}
  
-    public static void show(Long id) {
+	public static void show(Long id) {
         Aluno aluno = Aluno.findById(id);
-        if (request.contentType.equals("application/json")) {
-        	renderJSON(aluno);
-        } else {
-        	render(aluno);
-        }
+        render(aluno);
+    }
+	
+	public static void showJSON(Long id) {
+        Aluno aluno = Aluno.findById(id);
+        renderJSON(aluno);
     }
  
     public static void delete(Long id) {

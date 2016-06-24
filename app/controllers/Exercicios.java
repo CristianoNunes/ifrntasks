@@ -1,6 +1,8 @@
 package controllers;
 
 import java.util.List;
+
+import models.Aluno;
 import models.Exercicio;
 import play.mvc.Controller;
 
@@ -35,6 +37,11 @@ public class Exercicios extends Controller{
     public static void show(Long id) {
         Exercicio exercicio = Exercicio.findById(id);
         render(exercicio);
+    }
+    
+    public static void showJSON(Long id) {
+        Exercicio exercicio = Exercicio.findById(id);
+        renderJSON(exercicio);
     }
  
     public static void delete(Long id) {

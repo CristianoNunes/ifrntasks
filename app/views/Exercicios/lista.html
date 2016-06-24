@@ -24,9 +24,9 @@
 <div class="panel box-shadow-none content-header">
                   <div class="panel-body">
                     <div class="col-md-12">
-                        <h3 class="animated fadeInLeft">Lista</h3>
+                        <h3 class="animated fadeInLeft">Cadastro</h3>
                         <p class="animated fadeInDown">
-                          Lista <span class="fa-angle-right fa"></span> Exercícios
+                          Lista <span class="fa-angle-right fa"></span> Exercicios
                         </p>
                     </div>
                   </div>
@@ -34,14 +34,13 @@
               <div class="col-md-12 top-20 padding-0">
                 <div class="col-md-12">
                   <div class="panel">
-                    <div class="panel-heading"><h3>Exercícios<h3></div>
+                    <div class="panel-heading"><h3>Exercicios</h3></div>
                     <div class="panel-body">
                       <div class="responsive-table">
                       <table id="datatables-example" class="table table-striped table-bordered" width="100%" cellspacing="0">
                       <thead>
                         <tr>
                           <th>Nome</th>
-                          <th>Imagem</th>
                           <th></th>
                           
                         </tr>
@@ -50,10 +49,7 @@
                       #{list items:exercicios, as:'e'}
 						<tr>
 							<td> ${e.nomeExercicio}  </td> 
-							<td> ${e.imagem} </td> 
-							<td>
-								<a href="@{Exercicios.form(e.id)}"><input type="button" class="btn btn-round btn-warning" value="Editar"/></a>
-								<a href="@{Exercicios.deletar(e.id)}"> <input type="button" class="btn btn-round btn-danger" value="Excluir"/></a>
+								<td><a href="@{Exercicios.show(e.id)}"><input type="button" class="btn btn-round btn-primary" value="Detalhes"/></a>
 							</td>
 						</tr>
 					  #{/list}
