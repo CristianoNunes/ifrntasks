@@ -1,0 +1,87 @@
+#{extends 'main.html' /}
+#{set title:'Alunos' /}
+
+
+<div class="panel box-shadow-none content-header">
+	<div class="panel-body">
+		<div class="col-md-12">
+			<h3 class="animated fadeInLeft">Cadastro</h3>
+			<p class="animated fadeInDown">
+				Aluno <span class="fa-angle-right fa"></span> Lista <span class="fa-angle-right fa"></span> Detalhes
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="col-md-10">
+                  <div class="col-md-12 panel">
+                    <div class="col-md-12 panel-heading">
+                      <h4>Aluno</h4>
+                    </div>
+                    <div class="col-md-12 panel-body" style="padding-bottom:30px;">
+                      <div class="col-md-12">
+                        <form class="cmxform" id="signupForm">
+                        	
+                        	<input type="hidden" name="aluno.id" value="${aluno?.id}">
+                          
+                          <div class="col-md-6">
+                            
+                            <div class="form-group"><label class="col-sm-2 control-label text-right">Nome</label>
+                              <input type="text" class="form-control" name="aluno.nome" value="${aluno?.nome}" disabled>
+                            </div>
+							<br />
+                            <div class="form-group"><label class="col-sm-2 control-label text-right">Idade</label>
+                              <input type="text" class="form-control" name="aluno.idade" value="${aluno?.idade}" disabled>
+                            </div>
+							
+                           <!-- <label>Sexo</label>
+                            <div class="form-animate-radio">
+                            
+                          		<label class="radio">
+                            	<input id="radio1" type="radio" name="aluno.sexo" value="M"/>
+                            	<span class="outer">
+                              	<span class="inner"></span></span> Masculino
+                            	</label>
+                            	<label class="radio">
+                            	<input id="radio2" type="radio" name="aluno.sexo" value="F"/>
+                            	<span class="outer">
+                              	<span class="inner"></span></span> Feminino
+                            	</label>
+                          	</div>  --> 
+                            
+                            
+                           
+                            
+                          </div>
+
+                          <div class="col-md-6">
+                          
+                          	<div class="form-group"><label class="col-sm-2 control-label text-right">Email</label>
+                              <input type="text" class="form-control" id="validate_email" name="aluno.email" value="${aluno?.email}" disabled>
+                            </div>
+                            
+
+                            <label class="col-sm-2 control-label text-right">Sexo</label>
+                            	<div class="col-sm-12 padding-0">
+                                	<select class="form-control" name="aluno.sexo" disabled>
+                                    	<option ${aluno?.sexo == "M" ? "selected" : ""} value="M">Masculino</option>
+										<option ${aluno?.sexo == "F" ? "selected" : ""} value="F">Feminino</option>
+                                  	</select>
+                                </div>
+                            </div>
+                          
+                          </div>
+                                             
+                          <div class="col-md-12">
+                          <br />
+                              <a href="@{Alunos.lista}"><input class="btn btn-round btn-primary" type="button" value="Voltar"></a>
+                              <a href="@{Alunos.form(aluno?.id)}"><input type="button" class="btn btn-round btn-warning" value="Editar"/></a>
+							  <a href="@{Alunos.deletar(aluno?.id)}"> <input type="button" class="btn btn-round btn-danger" value="Excluir"/></a>
+							  <a href="#"> <input type="button" class="btn btn-round btn-success" value="Treino"/></a>
+                        </div>
+                      </form>
+
+                    </div>
+                  </div>
+                </div>
+              </div>

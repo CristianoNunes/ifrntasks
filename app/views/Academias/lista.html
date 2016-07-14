@@ -1,0 +1,14 @@
+#{extends 'main.html' /}
+#{set title:'Lista de Academias' /}
+
+#{if flash.success}
+	${flash.success.raw()}
+#{/if}
+
+#{list items:academias, as:'ac'}
+	<ul>
+		<li>${ac.nomeAcademia} - ${ac.cnpj} - ${ac.proprietario} <a href="@{Academias.form(ac.id)}">Editar</a> <a href="@{Academias.deletar(ac.id)}">Excluir</a></li>
+	</ul>
+#{/list}
+
+<a href="@{Academias.form}">Novo</a>
