@@ -1,0 +1,58 @@
+#{extends 'main.html' /}
+#{set title:'Programas' /}
+
+
+<div class="panel box-shadow-none content-header">
+	<div class="panel-body">
+		<div class="col-md-12">
+			<h3 class="animated fadeInLeft">Cadastro</h3>
+			<p class="animated fadeInDown">
+				Cadastro <span class="fa-angle-right fa"></span> Aluno <span class="fa-angle-right fa"></span> Treino
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="col-md-10">
+                  <div class="col-md-12 panel">
+                    <div class="col-md-12 panel-heading">
+                      <h4>Treino</h4>
+                    </div>
+                    <div class="col-md-12 panel-body" style="padding-bottom:30px;">
+                      <div class="col-md-12">
+                        <form class="cmxform" id="signupForm" method="post" action="@{Programas.salvar}">
+                        	
+                        	<input type="hidden" name="programa.id" value="${programa?.id}">
+                          
+                          <div class="col-md-6">
+                            
+                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                              <input type="text" class="form-text" name="programa.dataInicio" value="${programa?.dataInicio}" required>
+                              <span class="bar"></span>
+                              <label>Data de Início</label>
+                            </div>
+
+                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                              <input type="text" class="form-text" name="programa.dataFim" value="${programa?.dataFim}" required>
+                              <span class="bar"></span>
+                              <label>Data de Fim</label>
+                            </div>
+                            
+                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                              <input type="text" class="form-text" name="programa.series" value="${programa?.series}" required>
+                              <span class="bar"></span>
+                              <label>Serie</label>
+                            </div>                
+                          
+                          </div>
+                                             
+                          <div class="col-md-12">
+                          <br />
+                              <input class="btn btn-round btn-success" type="submit" value="Salvar">
+                        </div>
+                      </form>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
