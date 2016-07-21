@@ -1,0 +1,58 @@
+#{extends 'main.html' /}
+#{set title:'Series' /}
+
+
+<div class="panel box-shadow-none content-header">
+	<div class="panel-body">
+		<div class="col-md-12">
+			<h3 class="animated fadeInLeft">Cadastro</h3>
+			<p class="animated fadeInDown">
+				Cadastro <span class="fa-angle-right fa"></span> Aluno <span class="fa-angle-right fa"></span> Treino <span class="fa-angle-right fa"></span> Series
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="col-md-10">
+                  <div class="col-md-12 panel">
+                    <div class="col-md-12 panel-heading">
+                      <h4>Serie</h4>
+                    </div>
+                    <div class="col-md-12 panel-body" style="padding-bottom:30px;">
+                      <div class="col-md-12">
+                        <form class="cmxform" id="signupForm" method="post" action="@{Series.salvar}">
+                        	
+                        	<input type="hidden" name="serie.id" value="${serie?.id}">
+                          
+                          <div class="col-md-6">
+                            
+                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                              <input type="text" class="form-text" name="serie.exercicio" value="${aluno?.nome}" required>
+                              <span class="bar"></span>
+                              <label>Exercício</label>
+                            </div>
+
+                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                              <input type="text" class="form-text" name="serie.quantidade" value="${serie?.quantidade}" required>
+                              <span class="bar"></span>
+                              <label>Quantidade</label>
+                            </div>
+                            
+                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                              <input type="text" class="form-text" name="serie.repeticao" value="${serie?.repeticao}" required>
+                              <span class="bar"></span>
+                              <label>Repetição</label>
+                            </div>                
+                          
+                          </div>
+                                             
+                          <div class="col-md-12">
+                          <br />
+                              <input class="btn btn-round btn-success" type="submit" value="Salvar">
+                        </div>
+                      </form>
+
+                    </div>
+                  </div>
+                </div>
+              </div>

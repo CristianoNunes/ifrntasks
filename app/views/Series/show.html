@@ -1,0 +1,55 @@
+#{extends 'main.html' /}
+#{set title:'Series' /}
+
+
+<div class="panel box-shadow-none content-header">
+	<div class="panel-body">
+		<div class="col-md-12">
+			<h3 class="animated fadeInLeft">Cadastro</h3>
+			<p class="animated fadeInDown">
+				Serie <span class="fa-angle-right fa"></span> Lista <span class="fa-angle-right fa"></span> Detalhes
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="col-md-10">
+	<div class="col-md-12 panel">
+		<div class="col-md-12 panel-heading">
+			<h4>Serie</h4>
+		</div>
+		<div class="col-md-12 panel-body" style="padding-bottom:30px;">
+			<div class="col-md-12">
+				<form class="cmxform" id="signupForm">
+					<input type="hidden" name="serie.id" value="${serie?.id}">
+                          
+                          <div class="col-md-6">
+                            
+                            <div class="form-group"><label class="col-sm-2 control-label text-right">Exercício</label>
+                              <input type="text" class="form-control" name="serie.exercicio" value="${serie?.exercicio}" disabled>
+                            </div>
+							
+							<br />
+                            <div class="form-group"><label class="col-sm-2 control-label text-right">Quantidade</label>
+                              <input type="text" class="form-control" name="serie.quantidade" value="${serie?.quantidade}" disabled>
+                            </div>
+                            
+                            <br />
+                            <div class="form-group"><label class="col-sm-2 control-label text-right">Repetição</label>
+                              <input type="text" class="form-control" name="serie.repeticao" value="${serie?.repeticao}" disabled>
+                            </div>
+                            
+                          </div>    
+                          
+			</div>
+                                             
+                          <div class="col-md-12">
+                          <br />
+                              <a href="@{Series.lista}"><input class="btn btn-round btn-primary" type="button" value="Voltar"></a>
+                              <a href="@{Series.form(serie?.id)}"><input type="button" class="btn btn-round btn-warning" value="Editar"/></a>
+							  <a href="@{Series.deletar(serie?.id)}"> <input type="button" class="btn btn-round btn-danger" value="Excluir"/></a>
+                        </div>
+				</form>
+		</div>
+	</div>
+</div>
