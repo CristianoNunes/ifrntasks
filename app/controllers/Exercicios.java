@@ -3,15 +3,16 @@ package controllers;
 import java.util.List;
 import models.Aluno;
 import models.Exercicio;
+import play.data.Upload;
 import play.mvc.Controller;
 
-public class Exercicios extends Controller{
-	
+public class Exercicios extends Controller {
+
 	public static void lista() {
 		List<Exercicio> exercicios = Exercicio.findAll();
 		render(exercicios);
 	}
-	
+
 	public static void form(Long id) {
 		if (id == null) {
 			render();
@@ -20,32 +21,38 @@ public class Exercicios extends Controller{
 			render(exercicio);
 		}
 	}
-	
+
 	public static void salvar(Exercicio exercicio) {
 		exercicio.save();
 		flash.success("O exercício foi cadastrado com sucesso!");
 		lista();
 	}
-	
-	public static void deletar(Long id){
+
+	public static void deletar(Long id) {
 		Exercicio exercicio = Exercicio.findById(id);
 		exercicio.delete();
 		lista();
 	}
- 
-    public static void show(Long id) {
-        Exercicio exercicio = Exercicio.findById(id);
-        render(exercicio);
-    }
-    
-    public static void showJSON(Long id) {
-        Exercicio exercicio = Exercicio.findById(id);
-        renderJSON(exercicio);
-    }
- 
-    public static void delete(Long id) {
-        Exercicio exercicio = Exercicio.findById(id);
-        exercicio.delete();
-    }
- 
+
+	public static void show(Long id) {
+		Exercicio exercicio = Exercicio.findById(id);
+		render(exercicio);
+	}
+
+	public static void showJSON(Long id) {
+		Exercicio exercicio = Exercicio.findById(id);
+		renderJSON(exercicio);
+	}
+
+	public static void delete(Long id) {
+		Exercicio exercicio = Exercicio.findById(id);
+		exercicio.delete();
+	}
+
+	public static void obterImagem(long id) {
+		Exercicio exercicio = Exercicio.findById(id);
+		response.setContentTypeIfNotSet(exercicio.imagem.type());
+		renderBinary(exercicio.imagem.get());
+	}
+
 }

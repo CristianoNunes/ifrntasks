@@ -1,0 +1,71 @@
+
+			<!--
+           <div class="col-md-6">
+           
+           	<div class="form-group form-animate-text" style="margin-top:40px !important;">
+               <input type="text" class="form-text" name="perimetria.tricipital" value="${perimetria?.tricipital}" required>
+               <span class="bar"></span>
+               <label>Tricipital</label>
+             </div>
+             
+             <div class="form-group form-animate-text" style="margin-top:40px !important;">
+               <input type="text" class="form-text" name="perimetria.subescapular" value="${perimetria?.subescapular}" required>
+               <span class="bar"></span>
+               <label>Sub Escapular</label>
+             </div>
+
+             <div class="form-group form-animate-text" style="margin-top:40px !important;">
+               <input type="text" class="form-text" name="perimetria.peitoral" value="${perimetria?.peitoral}" required>
+               <span class="bar"></span>
+               <label>Peitoral</label>
+             </div>
+             
+             <div class="form-group form-animate-text" style="margin-top:40px !important;">
+               <input type="text" class="form-text" name="perimetria.panturrilhaEsq" value="${perimetria?.panturrilhaEsq}" required>
+               <span class="bar"></span>
+               <label>Panturrilha Esquerda</label>
+             </div>
+             
+             <div class="form-group form-animate-text" style="margin-top:40px !important;">
+               <input type="text" class="form-text" name="perimetria.bicipital" value="${perimetria?.bicipital}" required>
+               <span class="bar"></span>
+               <label>Bicipital</label>
+             </div>
+             
+             <div class="form-group form-animate-text" style="margin-top:40px !important;">
+               <input type="text" class="form-text" name="perimetria.axilarMedia" value="${perimetria?.axilarMedia}" required>
+               <span class="bar"></span>
+               <label>Axilar Media</label>
+             </div>
+             
+             <div class="form-group form-animate-text" style="margin-top:40px !important;">
+               <input type="text" class="form-text" name="perimetria.supraIliaca" value="${perimetria?.supraIliaca}" required>
+               <span class="bar"></span>
+               <label>Supra Iliaca</label>
+             </div>
+             
+             <div class="form-group form-animate-text" style="margin-top:40px !important;">
+               <input type="text" class="form-text" name="perimetria.supraEspinhal" value="${perimetria?.supraEspinhal}" required>
+               <span class="bar"></span>
+               <label>Supra Espinhal</label>
+             </div>
+             
+             <div class="form-group form-animate-text" style="margin-top:40px !important;">
+               <input type="text" class="form-text" name="perimetria.abdominal" value="${perimetria?.abdominal}" required>
+               <span class="bar"></span>
+               <label>Abdominal</label>
+             </div>
+             
+             <div class="form-group form-animate-text" style="margin-top:40px !important;">
+               <input type="text" class="form-text" name="perimetria.coxa" value="${perimetria?.coxa}" required>
+               <span class="bar"></span>
+               <label>Coxa</label>
+             </div>
+             
+			<div class="form-group form-animate-text" style="margin-top:40px !important;">
+				<input type="text" class="form-text" name="perimetria.panturrilhaMedial" value="${perimetria?.panturrilhaMedial}" required>
+                       <span class="bar"></span>
+                       <label>Panturrilha Medial</label>
+                     </div>
+                   
+			</div> -->

@@ -32,7 +32,7 @@
 
       <div class="container">
 
-        <form class="form-signin">
+        <form class="form-signin" action="@{Logins.logar}" method="post">
           <div class="panel periodic-login">
              
               <div class="panel-body text-center">
@@ -42,19 +42,19 @@
 
                   <i class="icons icon-arrow-down"></i>
                   <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                    <input type="text" class="form-text" required>
+                    <input type="text" class="form-text" name="email" required>
                     <span class="bar"></span>
-                    <label>CNPJ</label>
+                    <label>Email</label>
                   </div>
                   <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                    <input type="password" class="form-text" required>
+                    <input type="password" class="form-text" name="senhaAcademia" required>
                     <span class="bar"></span>
                     <label>Senha</label>
                   </div>
                   <label class="pull-left">
                   <input type="checkbox" class="icheck pull-left" name="checkbox1"/> Lembrar-me
                   </label>
-                  <a href="@{Alunos.lista}"> <input type="button" class="btn col-md-12" value="Entrar"/> </a>
+                  <input type="submit" class="btn col-md-12" value="Entrar"/>
               </div>
                 <div class="text-center" style="padding:5px;">
                     <a href="#">Esqueceu a senha? </a>

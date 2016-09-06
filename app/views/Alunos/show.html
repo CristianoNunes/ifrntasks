@@ -14,44 +14,30 @@
 </div>
 
 <div class="col-md-10">
-                  <div class="col-md-12 panel">
-                    <div class="col-md-12 panel-heading">
-                      <h4>Aluno</h4>
-                    </div>
-                    <div class="col-md-12 panel-body" style="padding-bottom:30px;">
-                      <div class="col-md-12">
-                        <form class="cmxform" id="signupForm">
+	<div class="col-md-12 panel">
+		<div class="col-md-12 panel-heading">
+			<h4>Aluno</h4>
+		</div>
+		
+		<div class="col-md-12 panel-body" style="padding-bottom:30px;">
+			<div class="col-md-12">
+				
+				<form class="cmxform" id="signupForm">
                         	
-                        	<input type="hidden" name="aluno.id" value="${aluno?.id}">
+					<input type="hidden" name="aluno.id" value="${aluno?.id}">
                           
-                          <div class="col-md-6">
+					<div class="col-md-6">
                             
-                            <div class="form-group"><label class="col-sm-2 control-label text-right">Nome</label>
-                              <input type="text" class="form-control" name="aluno.nome" value="${aluno?.nome}" disabled>
-                            </div>
+						<div class="form-group"><label class="col-sm-2 control-label text-right">Nome</label>
+							<input type="text" class="form-control" name="aluno.nome" value="${aluno?.nome}" disabled>
+						</div>
+							
 							<br />
+                            
                             <div class="form-group"><label class="col-sm-2 control-label text-right">Idade</label>
                               <input type="text" class="form-control" name="aluno.idade" value="${aluno?.idade}" disabled>
                             </div>
-							
-                           <!-- <label>Sexo</label>
-                            <div class="form-animate-radio">
-                            
-                          		<label class="radio">
-                            	<input id="radio1" type="radio" name="aluno.sexo" value="M"/>
-                            	<span class="outer">
-                              	<span class="inner"></span></span> Masculino
-                            	</label>
-                            	<label class="radio">
-                            	<input id="radio2" type="radio" name="aluno.sexo" value="F"/>
-                            	<span class="outer">
-                              	<span class="inner"></span></span> Feminino
-                            	</label>
-                          	</div>  --> 
-                            
-                            
-                           
-                            
+							 
                           </div>
 
                           <div class="col-md-6">
@@ -60,7 +46,7 @@
                               <input type="text" class="form-control" id="validate_email" name="aluno.email" value="${aluno?.email}" disabled>
                             </div>
                             
-
+							<br />
                             <label class="col-sm-2 control-label text-right">Sexo</label>
                             	<div class="col-sm-12 padding-0">
                                 	<select class="form-control" name="aluno.sexo" disabled>
@@ -77,7 +63,9 @@
                               <a href="@{Alunos.lista}"><input class="btn btn-round btn-primary" type="button" value="Voltar"></a>
                               <a href="@{Alunos.form(aluno?.id)}"><input type="button" class="btn btn-round btn-warning" value="Editar"/></a>
 							  <a href="@{Alunos.deletar(aluno?.id)}"> <input type="button" class="btn btn-round btn-danger" value="Excluir"/></a>
-							  <a href="#"> <input type="button" class="btn btn-round btn-success" value="Treino"/></a>
+							  <a href="@{Programas.lista}"> <input type="button" class="btn btn-round btn-success" value="Treino"/></a>
+							  <a href="@{Perimetrias.lista(aluno?.id)}"> <input type="button" class="btn btn-round btn-primary" value="Perimetria"/></a>
+							  <a href="@{Dobras.lista()}"> <input type="button" class="btn btn-round btn-primary" value="Dobras"/></a>
                         </div>
                       </form>
 

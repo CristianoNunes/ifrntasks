@@ -2,6 +2,7 @@ package controllers;
 
 import java.util.List;
 
+import models.Exercicio;
 import models.Serie;
 import play.mvc.Controller;
 
@@ -12,18 +13,20 @@ public class Series extends Controller{
 	}
 	
 	public static void form(Long id) {
+		List<Exercicio> exercicios = Exercicio.findAll();
+		
 		if (id == null) {
-			render();
+			render(exercicios);
 		} else {
 			Serie serie = Serie.findById(id);
-			render(serie);
+			render(serie, exercicios);
 		}
 	}
 	
 	public static void salvar(Serie serie) {
 		serie.save();
 		flash.success("A serie foi cadastrada com sucesso!");
-		lista();
+		Programas.show(serie.programa.getId());
 	}
 	
 	public static void deletar(Long id){

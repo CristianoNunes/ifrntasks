@@ -4,7 +4,9 @@ import java.util.List;
 
 import models.Aluno;
 import play.mvc.Controller;
+import play.mvc.With;
  
+/*@With(Seguranca.class)*/
 public class Alunos extends Controller {
 	
 	public static void lista() {

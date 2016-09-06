@@ -6484,5 +6484,8 @@ ul li a:focus {
   .search-nav{
     display: none;
   }
+}
 
+.invisivel {
+	display: none;
 }

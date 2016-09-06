@@ -1,7 +1,10 @@
 package controllers;
 
 import java.util.List;
+
+import models.Exercicio;
 import models.Programa;
+import models.Serie;
 import play.mvc.Controller;
 
 public class Programas extends Controller{
@@ -23,7 +26,7 @@ public class Programas extends Controller{
 	public static void salvar(Programa programa) {
 		programa.save();
 		flash.success("O programa foi cadastrado com sucesso!");
-		lista();
+		show(programa.id);
 	}
 	
 	public static void deletar(Long id){
@@ -34,7 +37,9 @@ public class Programas extends Controller{
  
     public static void show(Long id) {
     	Programa programa = Programa.findById(id);
-        render(programa);
+
+    	List<Exercicio> exercicios = Exercicio.findAll();
+        render(programa, exercicios);
     }
     
     public static void showJSON(Long id) {

@@ -1,0 +1,95 @@
+#{extends 'main.html' /}
+#{set title:'Alunos' /}
+
+
+<div class="panel box-shadow-none content-header">
+	<div class="panel-body">
+		<div class="col-md-12">
+			<h3 class="animated fadeInLeft">Cadastro</h3>
+			<p class="animated fadeInDown">
+				Aluno <span class="fa-angle-right fa"></span> Lista <span class="fa-angle-right fa"></span> Detalhes
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="col-md-10">
+                  <div class="col-md-12 panel">
+                    <div class="col-md-12 panel-heading">
+                      <h4>Aluno</h4>
+                    </div>
+                    <div class="col-md-12 panel-body" style="padding-bottom:30px;">
+                      <div class="col-md-12">
+                        <form class="cmxform" id="signupForm">
+                        	
+                        	<input type="hidden" name="perimetria.id" value="${perimetria?.id}">
+                          
+                          <div class="col-md-6">
+                            
+                            <div class="form-group"><label class="col-sm-2 control-label text-right">Peso</label>
+                              <input type="text" class="form-text" name="perimetria.peso" value="${perimetria?.peso}" disabled>
+                            </div>
+
+                            <div class="form-group"><label class="col-sm-2 control-label text-right">Altura</label>
+                              <input type="text" class="form-text" name="perimetria.altura" value="${perimetria?.altura}" disabled>
+                            </div>
+                            
+                            <div class="form-group"><label class="col-sm-2 control-label text-right">Ombro</label>
+                              <input type="text" class="form-text" name="perimetria.ombro" value="${perimetria?.ombro}" disabled>
+                            </div>
+                            
+                            <div class="form-group"><label class="col-sm-2 control-label text-right">Torax</label>
+                              <input type="text" class="form-text" name="perimetria.torax" value="${perimetria?.torax}" disabled>
+                            </div>
+                            
+                            <div class="form-group"><label class="col-sm-2 control-label text-right">Cintura</label>
+                              <input type="text" class="form-text" name="perimetria.cintura" value="${perimetria?.cintura}" disabled>
+                            </div>
+                            
+                            <div class="form-group"><label class="col-sm-2 control-label text-right">Abdomem</label>
+                              <input type="text" class="form-text" name="perimetria.abdomem" value="${perimetria?.abdomem}" disabled>
+                            </div>
+                            
+                            <div class="form-group"><label class="col-sm-2 control-label text-right">Quadril</label>
+                              <input type="text" class="form-text" name="perimetria.quadril" value="${perimetria?.quadril}" disabled>
+                            </div>
+                            
+                            <div class="form-group"><label class="col-sm-2 control-label text-right">Bícipes Direito</label>
+                              <input type="text" class="form-text" name="perimetria.bicepsDir" value="${perimetria?.bicepsDir}" disabled>
+                            </div> 
+                            
+                            <div class="form-group"><label class="col-sm-2 control-label text-right">Bícipes Esquerdo</label>
+                              <input type="text" class="form-text" name="perimetria.bicepsEsq" value="${perimetria?.bicepsEsq}" disabled>
+                            </div>
+                            
+                            <div class="form-group"><label class="col-sm-2 control-label text-right">Coxa Direita</label>
+                              <input type="text" class="form-text" name="perimetria.coxaDir" value="${perimetria?.coxaDir}" disabled>
+                            </div> 
+                            
+                            <div class="form-group"><label class="col-sm-2 control-label text-right">Coxa Esquerda</label>
+                              <input type="text" class="form-text" name="perimetria.coxaEsq" value="${perimetria?.coxaEsq}" disabled>
+                            </div> 
+                            
+                            <div class="form-group"><label class="col-sm-2 control-label text-right">Panturrilha Direita</label>
+                              <input type="text" class="form-text" name="perimetria.panturrilhaDir" value="${perimetria?.panturrilhaDir}" disabled>
+                            </div>
+                            
+                            <div class="form-group"><label class="col-sm-2 control-label text-right">Panturrila Esquerda</label>
+                              <input type="text" class="form-text" name="perimetria.panturrilhaEsq" value="${perimetria?.panturrilhaEsq}" disabled>
+                            </div>                 
+                            
+                          </div>
+
+                                             
+                          <div class="col-md-12">
+                          <br />
+                              <a href="@{Perimetrias.lista}"><input class="btn btn-round btn-primary" type="button" value="Voltar"></a>
+                              <a href="@{Perimetrias.form(perimetria?.id)}"><input type="button" class="btn btn-round btn-warning" value="Editar"/></a>
+							  <a href="@{Perimetrias.deletar(perimetria?.id)}"> <input type="button" class="btn btn-round btn-danger" value="Excluir"/></a>
+                        </div>
+                      </form>
+
+                    </div>
+                  </div>
+                </div>
+              </div>

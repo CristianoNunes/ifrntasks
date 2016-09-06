@@ -14,5 +14,8 @@ public class Serie extends Model {
 	public Integer quantidade;
 	
 	public Integer repeticao;
+	
+	@ManyToOne
+	public Programa programa;
 
 }

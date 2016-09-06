@@ -1,0 +1,130 @@
+#{extends 'main.html' /}
+#{set title:'Perimetrias' /}
+
+
+<div class="panel box-shadow-none content-header">
+	<div class="panel-body">
+		<div class="col-md-12">
+			<h3 class="animated fadeInLeft">Cadastro</h3>
+			<p class="animated fadeInDown">
+				Cadastro <span class="fa-angle-right fa"></span> Aluno <span class="fa-angle-right fa"></span> Avaliação Física
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="col-md-10">
+	<div class="col-md-12 panel">
+		
+		<div class="col-md-12 panel-heading">
+			<h4>Avaliação Física - Passo 1</h4>
+		</div>
+		
+		<div class="col-md-12 panel-body" style="padding-bottom:30px;">
+			<div class="col-md-12">
+				<form class="cmxform" id="signupForm" method="post" action="@{Perimetrias.salvar}">
+         			
+					<input type="hidden" name="perimetria.id" value="${perimetria?.id}">
+					<input type="hidden" name="perimetria.aluno.id" value="${idAluno}">
+           
+					<div class="col-md-6">
+             
+						<div class="form-group form-animate-text" style="margin-top:40px !important;">
+							<input type="text" class="form-text" name="perimetria.peso" value="${perimetria?.peso}" required>
+							<span class="bar"></span>
+							<label>Peso</label>
+						</div>
+
+						<div class="form-group form-animate-text" style="margin-top:40px !important;">
+							<input type="text" class="form-text" name="perimetria.altura" value="${perimetria?.altura}" required>
+							<span class="bar"></span>
+							<label>Altura</label>
+						</div>
+             
+						<div class="form-group form-animate-text" style="margin-top:40px !important;">
+							<input type="text" class="form-text" name="perimetria.ombro" value="${perimetria?.ombro}" required>
+							<span class="bar"></span>
+							<label>Ombro</label>
+						</div>
+             
+						<div class="form-group form-animate-text" style="margin-top:40px !important;">
+							<input type="text" class="form-text" name="perimetria.torax" value="${perimetria?.torax}" required>
+							<span class="bar"></span>
+							<label>Torax</label>
+						</div>
+             
+						<div class="form-group form-animate-text" style="margin-top:40px !important;">
+							<input type="text" class="form-text" name="perimetria.cintura" value="${perimetria?.cintura}" required>
+							<span class="bar"></span>
+							<label>Cintura</label>
+						</div>
+             
+						<div class="form-group form-animate-text" style="margin-top:40px !important;">
+							<input type="text" class="form-text" name="perimetria.abdomem" value="${perimetria?.abdomem}" required>
+							<span class="bar"></span>
+							<label>Abdomem</label>
+						</div>
+             
+						<div class="form-group form-animate-text" style="margin-top:40px !important;">
+							<input type="text" class="form-text" name="perimetria.quadril" value="${perimetria?.quadril}" required>
+							<span class="bar"></span>
+							<label>Quadril</label>
+						</div>
+             
+						<div class="form-group form-animate-text" style="margin-top:40px !important;">
+							<input type="text" class="form-text" name="perimetria.bicepsDir" value="${perimetria?.bicepsDir}" required>
+							<span class="bar"></span>
+							<label>Bícipes Direito</label>
+						</div> 
+					</div>             
+				
+				<div class="col-md-6">     
+					
+					<div class="form-group form-animate-text" style="margin-top:40px !important;">
+						<input type="text" class="form-text" name="perimetria.bicepsEsq" value="${perimetria?.bicepsEsq}" required>
+						<span class="bar"></span>
+						<label>Bícipes Esquerdo</label>
+					</div>
+             
+					<div class="form-group form-animate-text" style="margin-top:40px !important;">
+						<input type="text" class="form-text" name="perimetria.coxaDir" value="${perimetria?.coxaDir}" required>
+						<span class="bar"></span>
+						<label>Coxa Direita</label>
+					</div> 
+             
+					<div class="form-group form-animate-text" style="margin-top:40px !important;">
+						<input type="text" class="form-text" name="perimetria.coxaEsq" value="${perimetria?.coxaEsq}" required>
+						<span class="bar"></span>
+						<label>Coxa Esquerda</label>
+					</div> 
+             
+					<div class="form-group form-animate-text" style="margin-top:40px !important;">
+						<input type="text" class="form-text" name="perimetria.panturrilhaDir" value="${perimetria?.panturrilhaDir}" required>
+						<span class="bar"></span>
+						<label>Panturrilha Direita</label>
+					</div>
+             
+					<div class="form-group form-animate-text" style="margin-top:40px !important;">
+						<input type="text" class="form-text" name="perimetria.panturrilhaEsq" value="${perimetria?.panturrilhaEsq}" required>
+						<span class="bar"></span>
+						<label>Panturrilha Esquerda</label>
+					</div>
+             
+					<div class="form-group form-animate-text" style="margin-top:40px !important;">
+						<input type="text" class="form-text" name="perimetria.panturrilhaEsq" value="${perimetria?.panturrilhaEsq}" required>
+						<span class="bar"></span>
+						<label>Panturrilha Esquerda</label>
+					</div>
+					
+				</div>
+			</div>
+                              
+	<div class="col-md-12">
+                   <br />
+                       <input class="btn btn-round btn-success" type="submit" value="Salvar">
+                 </div>
+               </form>
+
+		</div>
+	</div>
+</div>

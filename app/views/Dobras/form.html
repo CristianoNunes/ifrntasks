@@ -1,0 +1,139 @@
+#{extends 'main.html' /}
+#{set title:'Perimetrias' /}
+
+
+<div class="panel box-shadow-none content-header">
+	<div class="panel-body">
+		<div class="col-md-12">
+			<h3 class="animated fadeInLeft">Cadastro</h3>
+			<p class="animated fadeInDown">
+				Cadastro <span class="fa-angle-right fa"></span> Aluno <span class="fa-angle-right fa"></span> Avaliação Física
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="col-md-10">
+	<div class="col-md-12 panel">
+		
+		<div class="col-md-12 panel-heading">
+			<h4>Avaliação Física - Passo 2</h4>
+		</div>
+		
+		<div class="col-md-12 panel-body" style="padding-bottom:30px;">
+			<div class="col-md-12">
+				
+         	
+					
+					
+					<div class="col-md-12">
+						<br />
+						<select id="metodoPG">
+							<option value="#metodo1">Protocolo Guedes - Homens</option>
+							<option value="#metodo2">Protocolo Guedes - Mulheres</option>
+						</select>
+						
+						<form id="metodo1" method="post" action="@{Dobras.salvar}">
+							
+							
+							<input type="hidden" name="dobra.id" value="${dobra?.id}">
+							<input type="hidden" name="dobra.aluno.id" value="${idAluno}">
+							
+							<div class="col-md-6">
+
+								<div class="form-group form-animate-text" style="margin-top:40px !important;">
+									<input type="text" class="form-text" name="dobra.tricipital" value="${dobra?.tricipital}" required>
+									<span class="bar"></span>
+									<label>Tricipital</label>
+								</div>
+								
+								<div class="form-group form-animate-text" style="margin-top:40px !important;">
+									<input type="text" class="form-text" name="dobra.supraIliaca" value="${dobra?.supraIliaca}" required>
+									<span class="bar"></span>
+									<label>Supra Iliaca</label>
+								</div>
+								
+								<div class="form-group form-animate-text" style="margin-top:40px !important;">
+									<input type="text" class="form-text" name="dobra.subescapular" value="${dobra?.subescapular}" required>
+									<span class="bar"></span>
+									<label>Sub Escapular</label>
+								</div>
+								
+								<div class="form-group form-animate-text" style="margin-top:40px !important;">
+									<input type="text" class="form-text" name="dobra.abdominal" value="${dobra?.abdominal}" required>
+									<span class="bar"></span>
+									<label>Abdominal</label>
+								</div>
+							
+							</div>
+						
+							<div class="col-md-12">
+                   				<br />
+                       			<input class="btn btn-round btn-success" type="submit" value="Salvar">
+                 			</div>
+							
+						</form>
+						
+						<form id="metodo2" class="invisivel"  method="post" action="@{Dobras.salvar}">
+							
+							<input type="hidden" name="dobra.id" value="${dobra?.id}">
+							<input type="hidden" name="dobra.aluno.id" value="${idAluno}">
+							
+							<input type="hidden" name="dobra.id" value="${dobra?.id}">
+							
+							<div class="col-md-6">
+								
+								<div class="form-group form-animate-text" style="margin-top:40px !important;">
+									<input type="text" class="form-text" name="dobra.coxa" value="${dobra?.coxa}" required>
+									<span class="bar"></span>
+									<label>Coxa</label>
+								</div>
+							
+								<div class="form-group form-animate-text" style="margin-top:40px !important;">
+									<input type="text" class="form-text" name="dobra.supraIliaca" value="${dobra?.supraIliaca}" required>
+									<span class="bar"></span>
+									<label>Supra Iliaca</label>
+								</div>
+							
+								<div class="form-group form-animate-text" style="margin-top:40px !important;">
+									<input type="text" class="form-text" name="dobra.subescapular" value="${dobra?.subescapular}" required>
+									<span class="bar"></span>
+									<label>Sub Escapular</label>
+								</div>
+							
+							</div>
+							
+							<div class="col-md-12">
+                   				<br />
+                       			<input class="btn btn-round btn-success" type="submit" value="Salvar">
+                 			</div>
+                 			
+						</form>
+					</div>
+					
+			</div>
+               
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#metodoPG").on('change', function (e) {
+			fecharTodos();
+			
+			var optionSelected = $("option:selected", this);
+		    var valueSelected = this.value;
+		    
+		    $(valueSelected).show();
+		    
+		});
+		
+		function fecharTodos() {
+			$("#metodoPG option").each(function() {
+				var seletor = $(this).val();
+				$(seletor).hide();
+			});
+		}
+	});
+</script>

@@ -1,29 +1,42 @@
 package controllers;
 
 import java.util.List;
+
+import Skinfold.SkinfoldFemaleGeneral;
+import Skinfold.SkinfoldFemaleGeneralPetroski1995;
+import models.Aluno;
+import models.Dobra;
 import models.Perimetria;
 import play.mvc.Controller;
 
 public class Perimetrias extends Controller{
+	
+	public static Long idAluno;
 	
 	public static void lista() {
 		List<Perimetria> perimetrias = Perimetria.findAll();
 		render(perimetrias);
 	}
 	
-	public static void form(Long id) {
+	public static void lista(Long id) {
+		List<Perimetria> perimetrias = Perimetria.findAll();
+		render(perimetrias);
+	}
+	
+	public static void form(Long idAluno, Long id) {
 		if (id == null) {
-			render();
+			render(idAluno);
 		} else {
 			Perimetria perimetria = Perimetria.findById(id);
-			render(perimetria);
+			render(perimetria, idAluno);
 		}
 	}
 	
 	public static void salvar(Perimetria perimetria) {
+		
 		perimetria.save();
-		flash.success("A perimetria foi cadastrada com sucesso!");
-		lista();
+		
+		Perimetrias.lista();
 	}
 	
 	public static void deletar(Long id){
@@ -33,6 +46,8 @@ public class Perimetrias extends Controller{
 	}
  
     public static void show(Long id) {
+    	
+    	
     	Perimetria perimetria = Perimetria.findById(id);
         render(perimetria);
     }
